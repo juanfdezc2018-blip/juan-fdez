@@ -696,6 +696,124 @@ export default function AmperPage({ params }: Props) {
         </div>
       </section>
 
+      {/* ── Consenso Analistas ── */}
+      <section>
+        <h2 className="font-mono text-xs text-sky-400 uppercase tracking-widest opacity-70 mb-1">// consenso de analistas · junio 2026</h2>
+        <h3 className="text-[#F5F7FA] font-semibold text-lg mb-2">¿A cuánto debería estar la acción según los analistas?</h3>
+        <p className="text-[#9AA7B8] text-sm leading-relaxed mb-5 max-w-2xl">
+          A día de hoy, el consenso es reducido (3 analistas) pero unánime en compra.
+          Renta 4 es el broker de referencia en el valor — su metodología es DCF 2026/30 y <span className="text-amber-400/80 font-mono text-xs">no incluye operaciones corporativas adicionales</span>.
+          Eso significa que el precio objetivo de 0,24 € es <em>sin ejecutar el plan completo de M&A</em>.
+        </p>
+
+        {/* Main consensus table */}
+        <div className="rounded-xl border border-border bg-surface overflow-x-auto mb-4">
+          <table className="w-full text-xs font-mono border-collapse">
+            <thead>
+              <tr className="border-b border-border">
+                <th className="text-left p-3.5 text-slate-500 font-medium">Fuente</th>
+                <th className="p-3 text-center text-slate-400 font-medium border-l border-border/50">Recomendación</th>
+                <th className="p-3 text-center text-slate-400 font-medium border-l border-border/50">P.O. pre-split</th>
+                <th className="p-3 text-center text-slate-400 font-medium border-l border-border/50">P.O. post-split ×25</th>
+                <th className="p-3 text-center text-slate-400 font-medium border-l border-border/50">Upside vs ~0,21 €</th>
+                <th className="p-3 text-left text-slate-400 font-medium border-l border-border/50">Metodología / Nota</th>
+              </tr>
+            </thead>
+            <tbody>
+              {[
+                {
+                  fuente: 'Renta 4 (Iván San Félix)', rec: 'Sobreponderar', rec_color: 'text-emerald-400',
+                  po_pre: '0,24 €', po_post: '6,00 €', upside: '+14%', upside_color: 'text-sky-400',
+                  nota: 'DCF 2026/30e · no incluye M&A adicional · ingresos -15% vs guía, EBITDA -1% vs guía · margen 16,9% en 2028', fecha: '6 mayo 2026',
+                },
+                {
+                  fuente: 'Consenso Investing (3 analistas)', rec: 'Strong Buy', rec_color: 'text-emerald-400',
+                  po_pre: '0,2367 €', po_post: '5,92 €', upside: '+13%', upside_color: 'text-sky-400',
+                  nota: 'Rango: 0,22–0,25 € · precio actual en Investing: ~0,1978 € · muestra pequeña', fecha: 'jun. 2026',
+                },
+              ].map(row => (
+                <tr key={row.fuente} className="border-b border-border/30">
+                  <td className="p-3.5 text-[#9AA7B8]">
+                    <div>{row.fuente}</div>
+                    <div className="text-[10px] text-slate-600 mt-0.5">{row.fecha}</div>
+                  </td>
+                  <td className={`p-3 text-center border-l border-border/40 font-semibold ${row.rec_color}`}>{row.rec}</td>
+                  <td className="p-3 text-center border-l border-border/40 text-[#F5F7FA] font-semibold">{row.po_pre}</td>
+                  <td className="p-3 text-center border-l border-border/40 text-sky-300 font-semibold">{row.po_post}</td>
+                  <td className={`p-3 text-center border-l border-border/40 font-semibold ${row.upside_color}`}>{row.upside}</td>
+                  <td className="p-3 border-l border-border/40 text-[#9AA7B8] text-[10px] leading-relaxed max-w-xs">{row.nota}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+
+        {/* Interpretation boxes */}
+        <div className="grid sm:grid-cols-2 gap-3 mb-4">
+          <div className="rounded-xl border border-sky-500/20 bg-sky-500/[0.03] p-4">
+            <div className="text-[10px] font-mono text-sky-400 uppercase tracking-wide mb-2">Qué implica el P.O. de Renta 4</div>
+            <ul className="space-y-1.5">
+              {[
+                'Cap implícita: 0,24 × 2.276M acc = ~547 M€',
+                'EV implícito (pre-Teltronic): ~547 + 82 = 629 M€',
+                'EV/EBITDA 2025 implícito: 629 / 46,3 = 13,6x',
+                'Sin operaciones corporativas adicionales',
+                'Upside limitado desde precio actual (+14%)',
+              ].map(p => (
+                <li key={p} className="flex gap-1.5 items-start">
+                  <span className="text-sky-400/50 text-[10px] shrink-0 mt-0.5">·</span>
+                  <span className="text-[#9AA7B8] text-[11px]">{p}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div className="rounded-xl border border-amber-500/20 bg-amber-500/[0.03] p-4">
+            <div className="text-[10px] font-mono text-amber-400 uppercase tracking-wide mb-2">Limitaciones del consenso</div>
+            <ul className="space-y-1.5">
+              {[
+                'Solo 3 analistas: muestra estadísticamente pequeña',
+                'Renta 4 no modela el impacto de Teltronic ni M&A futuro',
+                'El P.O. no refleja el plan 2028 completo',
+                'Si el plan se ejecuta, el P.O. quedaría obsoleto rápido',
+                'La acción ya cotiza cerca del objetivo actual',
+              ].map(p => (
+                <li key={p} className="flex gap-1.5 items-start">
+                  <span className="text-amber-400/50 text-[10px] shrink-0 mt-0.5">!</span>
+                  <span className="text-[#9AA7B8] text-[11px]">{p}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+
+        {/* Context vs our scenarios */}
+        <div className="rounded-xl border border-border bg-surface-2/40 p-4">
+          <div className="text-[10px] font-mono text-slate-500 uppercase tracking-wide mb-3">Contexto: consenso analistas vs escenarios de este análisis</div>
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
+            {[
+              { label: 'Precio actual', val: '~0,21 €', sub: '5,25 € post-split', color: 'text-slate-400' },
+              { label: 'Renta 4 P.O.', val: '0,24 €', sub: '6,00 € post-split', color: 'text-sky-400' },
+              { label: 'Escenario base', val: '0,34–0,48 €', sub: '8,5–12 € post-split', color: 'text-sky-400' },
+              { label: 'Escenario optimista', val: '0,56–0,74 €', sub: '14–18,5 € post-split', color: 'text-emerald-400' },
+            ].map(item => (
+              <div key={item.label} className="rounded-lg border border-border/60 bg-surface/60 p-3">
+                <div className="text-[10px] font-mono text-slate-500 mb-1 uppercase tracking-wide">{item.label}</div>
+                <div className={`font-semibold text-sm font-mono ${item.color}`}>{item.val}</div>
+                <div className="text-[10px] text-slate-600 mt-0.5">{item.sub}</div>
+              </div>
+            ))}
+          </div>
+          <p className="text-[#9AA7B8] text-[11px] leading-relaxed mt-3">
+            El P.O. de Renta 4 (0,24 €) está justo en la parte baja del escenario conservador de este análisis. Tiene sentido: no modela el upside del M&A completo.
+            Los escenarios base y optimista asumen ejecución del plan 2028 e integración de Teltronic — eso implica un horizonte de 2–3 años, no 12 meses.
+          </p>
+        </div>
+
+        <p className="text-[10px] text-slate-600 mt-3 leading-relaxed">
+          Disclaimer: los precios objetivo de analistas son estimaciones. No constituyen recomendación de compra. Fuentes: Renta 4 (informe 6/05/2026, analista Iván San Félix) · Investing.com consenso (jun. 2026).
+        </p>
+      </section>
+
       {/* ── Escenarios 2028 ── */}
       <section>
         <h2 className="font-mono text-xs text-sky-400 uppercase tracking-widest opacity-70 mb-1">// escenarios de valoración · horizonte 2028</h2>
