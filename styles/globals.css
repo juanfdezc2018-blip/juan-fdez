@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
 
 :root {
   --font-inter: 'Inter', system-ui, sans-serif;
@@ -20,69 +20,40 @@ html {
 }
 
 body {
-  background-color: #050A14;
-  color: #E2E8F0;
+  background-color: #070B12;
+  color: #F5F7FA;
   font-family: var(--font-inter);
   overflow-x: hidden;
 }
 
-/* Custom scrollbar */
-::-webkit-scrollbar {
-  width: 6px;
-}
-::-webkit-scrollbar-track {
-  background: #080F1E;
-}
-::-webkit-scrollbar-thumb {
-  background: #1a2a3a;
-  border-radius: 3px;
-}
-::-webkit-scrollbar-thumb:hover {
-  background: #00D4AA33;
-}
+/* ── Scrollbar ──────────────────────────────────────── */
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: #070B12; }
+::-webkit-scrollbar-thumb { background: #1E2A3A; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #253347; }
 
-/* Selection */
+/* ── Selection ──────────────────────────────────────── */
 ::selection {
-  background: rgba(0, 212, 170, 0.2);
-  color: #00D4AA;
+  background: rgba(56, 189, 248, 0.18);
+  color: #38BDF8;
 }
 
-/* Ticker animation */
-@keyframes ticker {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
-}
-
-.animate-ticker {
-  animation: ticker 30s linear infinite;
-}
-
-/* Float animation */
-@keyframes float {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-10px); }
-}
-
-.animate-float {
-  animation: float 6s ease-in-out infinite;
-}
-
-/* Glow utilities */
-.shadow-glow {
-  box-shadow: 0 0 20px rgba(0, 212, 170, 0.15);
-}
-
-.shadow-glow-sm {
-  box-shadow: 0 0 10px rgba(0, 212, 170, 0.1);
-}
-
-/* Focus styles */
+/* ── Focus ──────────────────────────────────────────── */
 :focus-visible {
-  outline: 2px solid rgba(0, 212, 170, 0.5);
+  outline: 2px solid rgba(56, 189, 248, 0.4);
   outline-offset: 2px;
+  border-radius: 4px;
 }
 
-/* Prose improvements */
-.text-balance {
-  text-wrap: balance;
+/* ── Utilities ──────────────────────────────────────── */
+.text-balance { text-wrap: balance; }
+
+.border-subtle { border-color: #1E2A3A; }
+
+/* Grid background utility */
+.bg-grid {
+  background-image:
+    linear-gradient(rgba(56, 189, 248, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(56, 189, 248, 0.03) 1px, transparent 1px);
+  background-size: 64px 64px;
 }

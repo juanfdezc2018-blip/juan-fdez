@@ -1,0 +1,306 @@
+{
+  "meta": {
+    "title": "Juan Fdez | Datos y Mercados",
+    "description": "Herramientas de análisis basadas en datos para mercados, riesgo y fintech.",
+    "keywords": "Data Engineering, Mercados Financieros, Análisis de Riesgo, Fintech, Python, AWS, Análisis de Empresas, Riesgo de Cartera, Datos Financieros"
+  },
+
+  "nav": {
+    "home": "Inicio",
+    "projects": "Proyectos",
+    "research": "Research",
+    "lab": "Lab",
+    "about": "Sobre mí",
+    "github": "GitHub",
+    "menu_open": "Abrir menú",
+    "menu_close": "Cerrar menú"
+  },
+
+  "hero": {
+    "badge": "Data Engineering × Research Financiero",
+    "name": "Juan Fdez",
+    "descriptor": "Datos y Mercados",
+    "headline": "Construyo herramientas de análisis basadas en datos para mercados, riesgo y fintech.",
+    "description": "De informes corporativos a modelos de valoración, dashboards e insights de riesgo: construido en público con Python, cloud y datos financieros.",
+    "cta_projects": "Ver proyectos",
+    "cta_research": "Leer research",
+    "cta_github": "GitHub",
+    "building": "Construyendo la base."
+  },
+
+  "dashboard_mock": {
+    "header": "research.pipeline",
+    "sources_label": "Fuentes",
+    "sources": ["Informes", "Datos de Mercado", "Macro"],
+    "model_label": "Modelo",
+    "model": ["Valoración", "Riesgo", "Escenarios"],
+    "output_label": "Output",
+    "output": ["Notas", "Dashboards", "Herramientas"],
+    "status_label": "Estado",
+    "status_value": "Construyendo"
+  },
+
+  "focus": {
+    "section_label": "// foco actual",
+    "section_title": "En qué estoy trabajando",
+    "section_desc": "Áreas activas de desarrollo en esta construcción pública.",
+    "items": [
+      {
+        "title": "Base del Portfolio",
+        "desc": "Estableciendo la estructura principal, flujos de trabajo y herramientas para futuros proyectos públicos.",
+        "status": "in_progress",
+        "tags": ["Setup", "Arquitectura"]
+      },
+      {
+        "title": "Flujo de Research",
+        "desc": "Definiendo el proceso de recopilación de datos, modelado y publicación paso a paso.",
+        "status": "in_progress",
+        "tags": ["Metodología", "Python"]
+      },
+      {
+        "title": "Herramientas de Datos",
+        "desc": "Construyendo módulos Python reutilizables y pipelines para datos financieros.",
+        "status": "planned",
+        "tags": ["Python", "Pandas", "AWS"]
+      },
+      {
+        "title": "Construcción Pública",
+        "desc": "Documentando el proceso de forma abierta. Cada proyecto se publica con su código.",
+        "status": "in_progress",
+        "tags": ["Open Source", "GitHub"]
+      }
+    ]
+  },
+
+  "framework": {
+    "section_label": "// metodología",
+    "section_title": "Marco de Research",
+    "section_desc": "Un enfoque estructurado para convertir datos financieros en análisis claro y reproducible.",
+    "steps": [
+      {
+        "number": "01",
+        "title": "Recopilar datos oficiales",
+        "desc": "Informes anuales, registros regulatorios, publicaciones de bancos centrales y datos financieros públicos."
+      },
+      {
+        "number": "02",
+        "title": "Limpiar y estructurar",
+        "desc": "Pipelines con Pandas para normalizar, validar y organizar los datos en formatos listos para el análisis."
+      },
+      {
+        "number": "03",
+        "title": "Modelar escenarios",
+        "desc": "Modelos de valoración, métricas de riesgo y análisis de escenarios bajo diferentes supuestos."
+      },
+      {
+        "number": "04",
+        "title": "Identificar riesgos",
+        "desc": "Tests de estrés, análisis de sensibilidad y documentación explícita del riesgo antes de sacar conclusiones."
+      },
+      {
+        "number": "05",
+        "title": "Publicar insights claros",
+        "desc": "Resultados en forma de notas, dashboards o herramientas interactivas — claros, reproducibles y abiertos."
+      }
+    ]
+  },
+
+  "principles": {
+    "section_label": "// principios",
+    "section_title": "Cómo trabajo",
+    "section_desc": "Un conjunto de reglas que guían cada proyecto y análisis.",
+    "items": [
+      {
+        "title": "Datos oficiales primero",
+        "desc": "Fuentes primarias sobre secundarias. Informes y datos regulatorios sobre agregadores."
+      },
+      {
+        "title": "Escenarios antes que predicciones",
+        "desc": "Sin previsiones de punto único. Todo análisis considera un rango de resultados posibles."
+      },
+      {
+        "title": "Riesgos antes que potencial",
+        "desc": "Lo que puede salir mal importa más que lo que puede salir bien."
+      },
+      {
+        "title": "Supuestos claros",
+        "desc": "Cada variable del modelo es explícita, documentada y cuestionable."
+      },
+      {
+        "title": "Construir en público",
+        "desc": "Código, proceso y resultados son abiertos. Sin cajas negras."
+      }
+    ]
+  },
+
+  "data_sources": {
+    "section_label": "// datos",
+    "section_title": "Fuentes de Datos",
+    "section_desc": "Los tipos de datos que alimentan cada proyecto.",
+    "items": [
+      "Informes corporativos",
+      "Datos de mercado",
+      "Bancos centrales",
+      "Agencias estadísticas",
+      "Datasets públicos",
+      "APIs",
+      "Papers académicos"
+    ]
+  },
+
+  "tech_stack": {
+    "section_label": "// stack",
+    "section_title": "Herramientas y Tecnologías",
+    "section_desc": "Las herramientas que uso para recopilar, procesar, modelar y publicar datos financieros."
+  },
+
+  "roadmap": {
+    "section_label": "// roadmap",
+    "section_title": "Plan de Construcción",
+    "section_desc": "Fases de esta construcción pública. Todo está en evolución.",
+    "phases": [
+      {
+        "phase": 1,
+        "title": "Base inicial",
+        "desc": "Web, flujo de trabajo y estructura central listos.",
+        "items": ["Web del portfolio", "Metodología de research", "Herramientas base"],
+        "status": "active"
+      },
+      {
+        "phase": 2,
+        "title": "Primer flujo de research",
+        "desc": "Completar el primer proyecto de análisis de principio a fin.",
+        "items": ["Pipeline de datos", "Modelo de valoración", "Nota de research publicada"],
+        "status": "upcoming"
+      },
+      {
+        "phase": 3,
+        "title": "Primer dashboard",
+        "desc": "Desplegar la primera herramienta de datos interactiva.",
+        "items": ["App Streamlit o Next.js", "Vista de riesgo o screener", "Repositorio GitHub"],
+        "status": "upcoming"
+      },
+      {
+        "phase": 4,
+        "title": "Notas públicas",
+        "desc": "Empezar a publicar notas de research escritas.",
+        "items": ["Formato de nota de research", "Primer análisis publicado", "Archivo de research"],
+        "status": "upcoming"
+      },
+      {
+        "phase": 5,
+        "title": "Herramientas interactivas",
+        "desc": "Construir y desplegar herramientas financieras reutilizables.",
+        "items": ["Calculadora de riesgo", "Screener", "Monitor macro"],
+        "status": "upcoming"
+      }
+    ]
+  },
+
+  "cta": {
+    "section_label": "// conecta",
+    "headline": "Sigue la construcción.",
+    "desc": "Este es un laboratorio público. Proyectos, código e investigación se publican a medida que se construyen.",
+    "cta_projects": "Explorar proyectos",
+    "cta_about": "Sobre mí",
+    "cta_contact": "Conecta conmigo"
+  },
+
+  "projects_page": {
+    "section_label": "// proyectos",
+    "title": "Proyectos",
+    "desc": "Proyectos de data engineering e investigación financiera — construidos en público, publicados con código.",
+    "filters": {
+      "all": "Todos",
+      "equity_research": "Análisis de Empresas",
+      "risk": "Riesgo",
+      "dashboard": "Dashboards",
+      "data_engineering": "Data Engineering",
+      "fintech": "Fintech",
+      "macro": "Macro"
+    },
+    "empty_title": "Sin proyectos todavía",
+    "empty_desc": "Los proyectos aparecerán aquí a medida que se vayan construyendo en público.",
+    "note_label": "Portfolio inicial",
+    "note_desc": "Construyendo en público — vuelve a medida que se publiquen nuevos proyectos.",
+    "cta_view": "Ver proyecto",
+    "cta_github": "GitHub",
+    "cta_live": "Ver demo →",
+    "coming_soon": "Próximamente"
+  },
+
+  "research_page": {
+    "section_label": "// research",
+    "title": "Notas de Research",
+    "desc": "Análisis basados en datos sobre mercados, valoración, riesgo y fintech. Solo con fines educativos.",
+    "filters": {
+      "all": "Todos",
+      "valuation": "Valoración",
+      "risk": "Riesgo",
+      "macro": "Macro",
+      "fintech": "Fintech",
+      "methodology": "Metodología",
+      "data": "Datos"
+    },
+    "empty_title": "Sin notas todavía",
+    "empty_desc": "Las notas se publicarán aquí a medida que se completen los proyectos.",
+    "cta_read": "Leer nota",
+    "coming_soon": "Próximamente",
+    "disclaimer": "Todo el research es solo con fines educativos y analíticos. Nada aquí constituye asesoramiento financiero."
+  },
+
+  "lab_page": {
+    "section_label": "// lab",
+    "title": "Lab",
+    "desc": "Herramientas interactivas, dashboards y experimentos. Datos financieros que puedes explorar.",
+    "filters": {
+      "all": "Todos",
+      "dashboard": "Dashboards",
+      "tool": "Herramientas",
+      "model": "Modelos",
+      "experiment": "Experimentos"
+    },
+    "empty_title": "El lab se está preparando",
+    "empty_desc": "Las herramientas interactivas y dashboards aparecerán aquí a medida que se desplieguen.",
+    "cta_open": "Abrir herramienta",
+    "cta_github": "GitHub",
+    "coming_soon": "Próximamente"
+  },
+
+  "about_page": {
+    "section_label": "// sobre mí",
+    "title": "Juan Fernández",
+    "bio": "Soy Juan Fernández, estudiante de Ciencia e Ingeniería de Datos enfocado en mercados financieros, análisis de riesgo y fintech. Esta web es mi laboratorio público: un lugar para construir y publicar flujos de research, herramientas de datos, dashboards e insights financieros claros mientras documento el proceso.",
+    "focus_title": "De qué va esta web",
+    "focus_items": [
+      "Construir proyectos públicos sobre mercados y riesgo",
+      "Convertir datos financieros en análisis claro",
+      "Aprender publicando",
+      "Conectar data engineering con mercados y riesgo"
+    ],
+    "stack_title": "Stack",
+    "connect_title": "Conecta",
+    "cv_note": "CV disponible bajo solicitud",
+    "disclaimer": "Todo el contenido es solo con fines educativos. No es asesoramiento financiero."
+  },
+
+  "footer": {
+    "disclaimer": "Research con fines educativos. No es asesoramiento financiero.",
+    "built_with": "Construido con Next.js, datos financieros y curiosidad."
+  },
+
+  "common": {
+    "status": {
+      "published": "Publicado",
+      "in_progress": "En progreso",
+      "coming_soon": "Próximamente",
+      "planned": "Planificado",
+      "draft": "Borrador",
+      "active": "Activo",
+      "upcoming": "Próximo",
+      "completed": "Completado"
+    },
+    "locale_label": "Idioma",
+    "skip_to_content": "Ir al contenido"
+  }
+}

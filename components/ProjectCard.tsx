@@ -1,98 +1,111 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import Link from 'next/link'
-import { Project } from '@/data/projects'
-import { statusConfig } from '@/lib/utils'
+import { statusStyles } from '@/lib/utils'
+import type { Project, Status } from '@/types'
 
-interface ProjectCardProps {
-  project: Project
-  index?: number
+interface CardDict {
+  cta_view: string
+  cta_github: string
+  cta_live: string
+  coming_soon: string
 }
 
-export default function ProjectCard({ project, index = 0 }: ProjectCardProps) {
-  const status = statusConfig[project.status]
-  const isAvailable = project.status === 'published'
+interface Props {
+  project: Project
+  index?: number
+  dict: CardDict
+  statusDict: Record<string, string>
+}
+
+export default function ProjectCard({ project, index = 0, dict, statusDict }: Props) {
+  const statusStyle = statusStyles[project.status]
 
   return (
     <motion.div
-      initial={{ opacity: 0, y: 24 }}
+      initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      transition={{ delay: index * 0.08, duration: 0.5 }}
-      className="group relative rounded-xl border border-white/8 bg-white/[0.02] hover:bg-white/[0.04] hover:border-[#00D4AA]/20 transition-all duration-300 overflow-hidden"
+      transition={{ delay: index * 0.07, duration: 0.45 }}
+      className="group rounded-xl border border-border bg-surface hover:border-border-2 transition-all duration-300 overflow-hidden"
     >
-      {/* Hover glow */}
-      <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
-        style={{ background: 'radial-gradient(circle at 50% 0%, rgba(0,212,170,0.06) 0%, transparent 60%)' }}
-      />
+      {/* Top accent bar */}
+      {project.status === 'published' && (
+        <div className="h-px bg-gradient-to-r from-sky-500/0 via-sky-500/40 to-sky-500/0" />
+      )}
 
-      <div className="relative p-6">
+      <div className="p-5">
         {/* Header */}
-        <div className="flex items-start justify-between gap-4 mb-3">
-          <h3 className="text-white font-semibold text-base leading-snug group-hover:text-[#00D4AA] transition-colors duration-200">
+        <div className="flex items-start justify-between gap-3 mb-3">
+          <h3 className="text-[#F5F7FA] font-semibold text-sm leading-snug group-hover:text-sky-300 transition-colors">
             {project.title}
           </h3>
-          <span className={`shrink-0 px-2 py-0.5 rounded-full border text-xs font-mono font-medium ${status.color}`}>
-            {status.label}
+          <span className={`shrink-0 px-2 py-0.5 rounded-full border text-xs font-mono ${statusStyle}`}>
+            {statusDict[project.status] ?? project.status}
           </span>
         </div>
 
         {/* Description */}
-        <p className="text-slate-400 text-sm leading-relaxed mb-4">
-          {project.description}
-        </p>
+        <p className="text-[#9AA7B8] text-xs leading-relaxed mb-3">{project.description}</p>
 
-        {/* Metrics */}
-        {project.metrics && project.metrics.length > 0 && (
-          <div className="flex flex-wrap gap-3 mb-4">
-            {project.metrics.map((m) => (
-              <div key={m.label} className="flex items-center gap-1.5">
-                <span className="font-mono text-xs text-slate-600">{m.label}:</span>
-                <span className="font-mono text-xs text-[#00D4AA]">{m.value}</span>
-              </div>
-            ))}
+        {/* Progress bar */}
+        {project.progress !== undefined && (
+          <div className="mb-3">
+            <div className="flex justify-between items-center mb-1">
+              <span className="font-mono text-xs text-slate-600">Progress</span>
+              <span className="font-mono text-xs text-sky-400">{project.progress}%</span>
+            </div>
+            <div className="h-1 rounded-full bg-border overflow-hidden">
+              <div
+                className="h-full rounded-full bg-sky-500 transition-all duration-500"
+                style={{ width: `${project.progress}%` }}
+              />
+            </div>
+          </div>
+        )}
+
+        {/* Output */}
+        {project.output && (
+          <div className="flex items-center gap-1.5 mb-3">
+            <span className="font-mono text-xs text-slate-600">Output:</span>
+            <span className="font-mono text-xs text-amber-400">{project.output}</span>
           </div>
         )}
 
         {/* Tags */}
-        <div className="flex flex-wrap gap-1.5 mb-5">
+        <div className="flex flex-wrap gap-1.5 mb-4">
           {project.tags.map((tag) => (
-            <span
-              key={tag}
-              className="px-2 py-0.5 rounded-md bg-white/5 border border-white/8 text-slate-400 text-xs"
-            >
+            <span key={tag} className="px-2 py-0.5 rounded bg-white/[0.04] border border-border text-slate-500 text-xs">
               {tag}
             </span>
           ))}
         </div>
 
         {/* Actions */}
-        <div className="flex items-center gap-2">
-          {isAvailable && project.articleUrl ? (
-            <Link
-              href={project.articleUrl}
-              className="px-3 py-1.5 bg-[#00D4AA]/10 border border-[#00D4AA]/30 text-[#00D4AA] text-xs font-medium rounded-lg hover:bg-[#00D4AA]/20 transition-colors"
-            >
-              View Project →
-            </Link>
+        <div className="flex items-center gap-2 flex-wrap">
+          {project.liveUrl ? (
+            <a href={project.liveUrl} target="_blank" rel="noopener noreferrer"
+              className="px-3 py-1.5 bg-sky-500/10 border border-sky-500/25 text-sky-400 text-xs font-medium rounded-lg hover:bg-sky-500/15 transition-colors">
+              {dict.cta_live}
+            </a>
+          ) : project.status === 'published' ? (
+            <a href={project.githubUrl} target="_blank" rel="noopener noreferrer"
+              className="px-3 py-1.5 bg-sky-500/10 border border-sky-500/25 text-sky-400 text-xs font-medium rounded-lg hover:bg-sky-500/15 transition-colors">
+              {dict.cta_view}
+            </a>
           ) : (
-            <span className="px-3 py-1.5 bg-white/5 border border-white/8 text-slate-600 text-xs font-medium rounded-lg cursor-not-allowed">
-              {project.status === 'planned' ? 'Planned' : 'In progress'}
+            <span className="px-3 py-1.5 border border-border text-slate-600 text-xs font-mono rounded-lg">
+              {dict.coming_soon}
             </span>
           )}
           {project.githubUrl ? (
-            <a
-              href={project.githubUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-3 py-1.5 border border-white/10 text-slate-400 text-xs font-medium rounded-lg hover:border-white/20 hover:text-white transition-colors"
-            >
-              GitHub ↗
+            <a href={project.githubUrl} target="_blank" rel="noopener noreferrer"
+              className="px-3 py-1.5 border border-border text-slate-400 text-xs font-medium rounded-lg hover:border-border-2 hover:text-slate-300 transition-colors">
+              {dict.cta_github} ↗
             </a>
           ) : (
-            <span className="px-3 py-1.5 border border-white/5 text-slate-700 text-xs font-medium rounded-lg cursor-not-allowed">
-              GitHub —
+            <span className="px-3 py-1.5 border border-border/50 text-slate-700 text-xs rounded-lg cursor-default">
+              {dict.cta_github} —
             </span>
           )}
         </div>

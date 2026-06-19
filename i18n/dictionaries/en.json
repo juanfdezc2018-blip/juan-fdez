@@ -1,0 +1,306 @@
+{
+  "meta": {
+    "title": "Juan Fdez | Data & Markets",
+    "description": "Data-driven research tools for markets, risk and fintech.",
+    "keywords": "Data Engineering, Financial Markets, Risk Analytics, Fintech, Python, AWS, Equity Research, Portfolio Risk, Financial Data"
+  },
+
+  "nav": {
+    "home": "Home",
+    "projects": "Projects",
+    "research": "Research",
+    "lab": "Lab",
+    "about": "About",
+    "github": "GitHub",
+    "menu_open": "Open menu",
+    "menu_close": "Close menu"
+  },
+
+  "hero": {
+    "badge": "Data Engineering × Financial Research",
+    "name": "Juan Fdez",
+    "descriptor": "Data & Markets",
+    "headline": "I build data-driven research tools for markets, risk and fintech.",
+    "description": "From company filings to valuation models, dashboards and risk insights — built in public with Python, cloud and financial data.",
+    "cta_projects": "View Projects",
+    "cta_research": "Read Research",
+    "cta_github": "GitHub",
+    "building": "Currently building the foundation."
+  },
+
+  "dashboard_mock": {
+    "header": "research.pipeline",
+    "sources_label": "Sources",
+    "sources": ["Filings", "Market Data", "Macro Data"],
+    "model_label": "Model",
+    "model": ["Valuation", "Risk", "Scenarios"],
+    "output_label": "Output",
+    "output": ["Notes", "Dashboards", "Tools"],
+    "status_label": "Status",
+    "status_value": "Building"
+  },
+
+  "focus": {
+    "section_label": "// current focus",
+    "section_title": "What I'm working on",
+    "section_desc": "Active areas of development for this public build.",
+    "items": [
+      {
+        "title": "Portfolio Foundation",
+        "desc": "Setting up the core structure, workflows and tooling for future public projects.",
+        "status": "in_progress",
+        "tags": ["Setup", "Architecture"]
+      },
+      {
+        "title": "Research Workflow",
+        "desc": "Defining the data collection, modeling and publishing process step by step.",
+        "status": "in_progress",
+        "tags": ["Methodology", "Python"]
+      },
+      {
+        "title": "Data Tools",
+        "desc": "Building reusable Python modules and pipelines for financial data processing.",
+        "status": "planned",
+        "tags": ["Python", "Pandas", "AWS"]
+      },
+      {
+        "title": "Public Build",
+        "desc": "Documenting the entire process openly. Every project ships with code.",
+        "status": "in_progress",
+        "tags": ["Open Source", "GitHub"]
+      }
+    ]
+  },
+
+  "framework": {
+    "section_label": "// methodology",
+    "section_title": "Research Framework",
+    "section_desc": "A structured approach to turning raw financial data into clear, reproducible analysis.",
+    "steps": [
+      {
+        "number": "01",
+        "title": "Collect official data",
+        "desc": "Annual reports, regulatory filings, central bank releases and public financial datasets."
+      },
+      {
+        "number": "02",
+        "title": "Clean and structure",
+        "desc": "Pandas pipelines to normalize, validate and organize data into analysis-ready formats."
+      },
+      {
+        "number": "03",
+        "title": "Model scenarios",
+        "desc": "Valuation models, risk metrics and scenario analysis across different assumptions."
+      },
+      {
+        "number": "04",
+        "title": "Identify risks",
+        "desc": "Stress tests, sensitivity analysis and explicit risk documentation before conclusions."
+      },
+      {
+        "number": "05",
+        "title": "Publish clear insights",
+        "desc": "Results as notes, dashboards or interactive tools — clear, reproducible and open."
+      }
+    ]
+  },
+
+  "principles": {
+    "section_label": "// principles",
+    "section_title": "How I work",
+    "section_desc": "A set of rules that guide every project and analysis.",
+    "items": [
+      {
+        "title": "Official data first",
+        "desc": "Primary sources over secondary. Filings and regulatory data over aggregators."
+      },
+      {
+        "title": "Scenarios over predictions",
+        "desc": "No point forecasts. Every analysis considers a range of outcomes."
+      },
+      {
+        "title": "Risks before upside",
+        "desc": "What can go wrong matters more than what can go right."
+      },
+      {
+        "title": "Clear assumptions",
+        "desc": "Every model input is explicit, documented and challengeable."
+      },
+      {
+        "title": "Build in public",
+        "desc": "Code, process and results are open. No black boxes."
+      }
+    ]
+  },
+
+  "data_sources": {
+    "section_label": "// data",
+    "section_title": "Data Sources",
+    "section_desc": "The types of data that feed every project.",
+    "items": [
+      "Company filings",
+      "Market data",
+      "Central banks",
+      "Statistical agencies",
+      "Public datasets",
+      "APIs",
+      "Research papers"
+    ]
+  },
+
+  "tech_stack": {
+    "section_label": "// stack",
+    "section_title": "Tools & Technologies",
+    "section_desc": "The tools I use to collect, process, model and publish financial data."
+  },
+
+  "roadmap": {
+    "section_label": "// roadmap",
+    "section_title": "Build Roadmap",
+    "section_desc": "Phases for this public build. Everything is evolving.",
+    "phases": [
+      {
+        "phase": 1,
+        "title": "Foundation",
+        "desc": "Website, workflow and core structure in place.",
+        "items": ["Portfolio website", "Research methodology", "Core tooling"],
+        "status": "active"
+      },
+      {
+        "phase": 2,
+        "title": "First research workflow",
+        "desc": "Complete first end-to-end analysis project.",
+        "items": ["Data collection pipeline", "Valuation model", "Published research note"],
+        "status": "upcoming"
+      },
+      {
+        "phase": 3,
+        "title": "First dashboard",
+        "desc": "Deploy first interactive data tool.",
+        "items": ["Streamlit or Next.js app", "Risk or screener view", "GitHub repository"],
+        "status": "upcoming"
+      },
+      {
+        "phase": 4,
+        "title": "Public notes",
+        "desc": "Start publishing written research notes.",
+        "items": ["Research note format", "First published analysis", "Research archive"],
+        "status": "upcoming"
+      },
+      {
+        "phase": 5,
+        "title": "Interactive tools",
+        "desc": "Build and deploy reusable financial tools.",
+        "items": ["Risk calculator", "Screener tool", "Macro monitor"],
+        "status": "upcoming"
+      }
+    ]
+  },
+
+  "cta": {
+    "section_label": "// connect",
+    "headline": "Follow the build.",
+    "desc": "This is a public lab. Projects, code and research are published as they are built throughout the year.",
+    "cta_projects": "Explore Projects",
+    "cta_about": "About me",
+    "cta_contact": "Get in touch"
+  },
+
+  "projects_page": {
+    "section_label": "// projects",
+    "title": "Projects",
+    "desc": "Data engineering and financial research projects — built in public, shipped with code.",
+    "filters": {
+      "all": "All",
+      "equity_research": "Equity Research",
+      "risk": "Risk",
+      "dashboard": "Dashboards",
+      "data_engineering": "Data Engineering",
+      "fintech": "Fintech",
+      "macro": "Macro"
+    },
+    "empty_title": "No projects yet",
+    "empty_desc": "Projects will be added here as they are built in public.",
+    "note_label": "Early portfolio",
+    "note_desc": "Building in public — check back as new projects are published.",
+    "cta_view": "View project",
+    "cta_github": "GitHub",
+    "cta_live": "Live →",
+    "coming_soon": "Coming soon"
+  },
+
+  "research_page": {
+    "section_label": "// research",
+    "title": "Research Notes",
+    "desc": "Data-driven analysis on markets, valuation, risk and fintech. For educational purposes only.",
+    "filters": {
+      "all": "All",
+      "valuation": "Valuation",
+      "risk": "Risk",
+      "macro": "Macro",
+      "fintech": "Fintech",
+      "methodology": "Methodology",
+      "data": "Data"
+    },
+    "empty_title": "No research notes yet",
+    "empty_desc": "Notes will be published here as projects are completed.",
+    "cta_read": "Read note",
+    "coming_soon": "Coming soon",
+    "disclaimer": "All research is for educational and analytical purposes only. Nothing here constitutes investment advice."
+  },
+
+  "lab_page": {
+    "section_label": "// lab",
+    "title": "Lab",
+    "desc": "Interactive tools, dashboards and experiments. Financial data you can explore.",
+    "filters": {
+      "all": "All",
+      "dashboard": "Dashboards",
+      "tool": "Tools",
+      "model": "Models",
+      "experiment": "Experiments"
+    },
+    "empty_title": "Lab is being set up",
+    "empty_desc": "Interactive tools and dashboards will appear here as they are deployed.",
+    "cta_open": "Open tool",
+    "cta_github": "GitHub",
+    "coming_soon": "Coming soon"
+  },
+
+  "about_page": {
+    "section_label": "// about",
+    "title": "Juan Fernández",
+    "bio": "I'm a Data Engineering student focused on financial markets, risk analytics and fintech. This site is my public lab: a place to build and publish research workflows, data tools, dashboards and clear financial insights while documenting the process.",
+    "focus_title": "What this site is about",
+    "focus_items": [
+      "Building public projects on markets and risk",
+      "Turning financial data into clear analysis",
+      "Learning by shipping",
+      "Connecting data engineering with markets and risk"
+    ],
+    "stack_title": "Stack",
+    "connect_title": "Connect",
+    "cv_note": "CV available on request",
+    "disclaimer": "All content is for educational purposes only. Not investment advice."
+  },
+
+  "footer": {
+    "disclaimer": "Research for educational purposes only. No investment advice.",
+    "built_with": "Built with Next.js, financial data and curiosity."
+  },
+
+  "common": {
+    "status": {
+      "published": "Published",
+      "in_progress": "In progress",
+      "coming_soon": "Coming soon",
+      "planned": "Planned",
+      "draft": "Draft",
+      "active": "Active",
+      "upcoming": "Upcoming",
+      "completed": "Completed"
+    },
+    "locale_label": "Language",
+    "skip_to_content": "Skip to content"
+  }
+}

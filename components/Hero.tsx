@@ -2,127 +2,120 @@
 
 import { motion } from 'framer-motion'
 import Link from 'next/link'
-import DashboardMockup from './DashboardMockup'
+import ResearchDashboardMock from './ResearchDashboardMock'
+import type { Locale } from '@/i18n/config'
 
-const fadeUp = {
-  hidden: { opacity: 0, y: 24 },
-  show: (i: number) => ({
-    opacity: 1,
-    y: 0,
-    transition: { delay: i * 0.1, duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] },
-  }),
+const fade = (delay: number) => ({
+  initial: { opacity: 0, y: 20 },
+  animate: { opacity: 1, y: 0 },
+  transition: { delay, duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] },
+})
+
+interface HeroDict {
+  badge: string
+  name: string
+  descriptor: string
+  headline: string
+  description: string
+  cta_projects: string
+  cta_research: string
+  cta_github: string
+  building: string
 }
 
-export default function Hero() {
+interface Props {
+  locale: Locale
+  dict: HeroDict
+  dashDict: {
+    header: string
+    sources_label: string
+    sources: string[]
+    model_label: string
+    model: string[]
+    output_label: string
+    output: string[]
+    status_label: string
+    status_value: string
+  }
+}
+
+export default function Hero({ locale, dict, dashDict }: Props) {
   return (
-    <section className="min-h-screen flex items-center pt-20 pb-16 px-6">
+    <section className="min-h-[90vh] flex items-center pt-20 pb-16 px-5">
       <div className="max-w-6xl mx-auto w-full">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          {/* Left: Copy */}
+        <div className="grid lg:grid-cols-[1fr_420px] gap-12 lg:gap-16 items-center">
+
+          {/* ── Left: copy ── */}
           <div>
             {/* Badge */}
-            <motion.div
-              custom={0}
-              initial="hidden"
-              animate="show"
-              variants={fadeUp}
-              className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-[#00D4AA]/20 bg-[#00D4AA]/5 mb-6"
-            >
-              <span className="w-1.5 h-1.5 rounded-full bg-[#00D4AA] animate-pulse-slow" />
-              <span className="font-mono text-xs text-[#00D4AA] tracking-wide">
-                Building in public · Summer 2026
+            <motion.div {...fade(0)} className="mb-6">
+              <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-sky-500/15 bg-sky-500/5 text-sky-400 font-mono text-xs tracking-wide">
+                <span className="w-1.5 h-1.5 rounded-full bg-sky-400 animate-pulse-slow" />
+                {dict.badge}
               </span>
             </motion.div>
 
             {/* Name */}
-            <motion.h1
-              custom={1}
-              initial="hidden"
-              animate="show"
-              variants={fadeUp}
-              className="text-5xl sm:text-6xl lg:text-7xl font-bold text-white tracking-tight mb-2"
-            >
-              Juan Fdez
+            <motion.h1 {...fade(0.08)} className="text-5xl sm:text-6xl lg:text-7xl font-bold text-[#F5F7FA] tracking-tight leading-none mb-2">
+              {dict.name}
             </motion.h1>
 
-            {/* Tagline */}
-            <motion.p
-              custom={2}
-              initial="hidden"
-              animate="show"
-              variants={fadeUp}
-              className="text-xl sm:text-2xl font-mono text-[#00D4AA] mb-6 tracking-wide"
-            >
-              Data &amp; Markets
+            {/* Descriptor */}
+            <motion.p {...fade(0.14)} className="text-lg sm:text-xl font-mono text-sky-400 mb-6 tracking-wide">
+              {dict.descriptor}
+            </motion.p>
+
+            {/* Headline */}
+            <motion.p {...fade(0.2)} className="text-xl sm:text-2xl font-medium text-[#F5F7FA] leading-snug mb-4 max-w-lg text-balance">
+              {dict.headline}
             </motion.p>
 
             {/* Description */}
-            <motion.p
-              custom={3}
-              initial="hidden"
-              animate="show"
-              variants={fadeUp}
-              className="text-slate-400 text-lg leading-relaxed mb-8 max-w-lg"
-            >
-              Building data-driven research on markets, risk and fintech.
-              I&apos;m a Data Engineering student turning financial data into
-              clear analysis, risk insights and market research.
+            <motion.p {...fade(0.26)} className="text-[#9AA7B8] text-base leading-relaxed mb-8 max-w-md">
+              {dict.description}
             </motion.p>
 
-            {/* CTA Buttons */}
-            <motion.div
-              custom={4}
-              initial="hidden"
-              animate="show"
-              variants={fadeUp}
-              className="flex flex-wrap gap-3"
-            >
+            {/* CTAs */}
+            <motion.div {...fade(0.32)} className="flex flex-wrap gap-3 mb-6">
               <Link
-                href="/projects"
-                className="px-5 py-2.5 bg-[#00D4AA] text-[#050A14] font-semibold text-sm rounded-lg hover:bg-[#00D4AA]/90 transition-all duration-200 hover:shadow-glow"
+                href={`/${locale}/projects`}
+                className="px-5 py-2.5 bg-sky-500 text-white font-semibold text-sm rounded-lg hover:bg-sky-400 transition-all duration-200 shadow-glow-sky"
               >
-                View Projects
+                {dict.cta_projects}
               </Link>
               <Link
-                href="/research"
-                className="px-5 py-2.5 border border-[#00D4AA]/30 text-[#00D4AA] font-medium text-sm rounded-lg hover:bg-[#00D4AA]/8 transition-all duration-200"
+                href={`/${locale}/research`}
+                className="px-5 py-2.5 border border-border-2 text-[#9AA7B8] font-medium text-sm rounded-lg hover:text-[#F5F7FA] hover:border-slate-500 transition-all duration-200"
               >
-                Read Research
+                {dict.cta_research}
               </Link>
               <a
-                href="mailto:juanfdezc.2018@gmail.com"
-                className="px-5 py-2.5 border border-white/10 text-slate-300 font-medium text-sm rounded-lg hover:bg-white/5 hover:border-white/20 transition-all duration-200"
+                href="https://github.com/juanfdezc2018-blip"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-5 py-2.5 border border-border text-slate-500 font-medium text-sm rounded-lg hover:text-slate-300 hover:border-border-2 transition-all duration-200"
               >
-                Contact ↗
+                {dict.cta_github} ↗
               </a>
             </motion.div>
 
-            {/* Social links */}
-            <motion.div
-              custom={5}
-              initial="hidden"
-              animate="show"
-              variants={fadeUp}
-              className="mt-6 flex items-center gap-4"
-            >
-              <a
-                href="mailto:juanfdezc.2018@gmail.com"
-                className="text-slate-500 hover:text-slate-300 text-sm transition-colors"
-              >
-                juanfdezc.2018@gmail.com
-              </a>
-            </motion.div>
+            {/* Building note */}
+            <motion.p {...fade(0.38)} className="font-mono text-xs text-slate-600">
+              <span className="inline-block w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse-slow mr-2 align-middle" />
+              {dict.building}
+            </motion.p>
           </div>
 
-          {/* Right: Dashboard Mockup */}
+          {/* ── Right: dashboard mock ── */}
           <motion.div
-            initial={{ opacity: 0, x: 40 }}
+            initial={{ opacity: 0, x: 30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.3, duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
             className="hidden lg:block"
           >
-            <DashboardMockup />
+            <ResearchDashboardMock dict={dashDict} />
           </motion.div>
+
         </div>
       </div>
     </section>
