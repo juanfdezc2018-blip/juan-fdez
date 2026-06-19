@@ -28,7 +28,7 @@ export default async function ProjectsPage({ params }: Props) {
 
       {/* Filter tabs (static for now — wire up interactivity when projects grow) */}
       <div className="flex flex-wrap gap-2 mb-8">
-        {Object.entries(p.filters).map(([key, label]) => (
+        {Object.entries(p.filters as Record<string, string>).map(([key, label]) => (
           <span
             key={key}
             className={`px-3 py-1.5 rounded-lg border text-xs font-medium cursor-default transition-colors ${

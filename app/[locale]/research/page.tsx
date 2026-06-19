@@ -28,7 +28,7 @@ export default async function ResearchPage({ params }: Props) {
 
       {/* Filter tabs */}
       <div className="flex flex-wrap gap-2 mb-8">
-        {Object.entries(r.filters).map(([key, label]) => (
+        {Object.entries(r.filters as Record<string, string>).map(([key, label]) => (
           <span
             key={key}
             className={`px-3 py-1.5 rounded-lg border text-xs font-medium cursor-default ${
