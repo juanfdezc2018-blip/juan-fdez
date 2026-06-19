@@ -22,20 +22,23 @@ import type { Project } from '@/types'
  *  - updatedAt:    (optional) ISO date string
  */
 export const projects: Project[] = [
-  // Add your projects below. Example:
-  //
-  // {
-  //   title: 'My Project',
-  //   slug: 'my-project',
-  //   description: 'Short description of what this project does.',
-  //   category: 'equity_research',
-  //   status: 'in_progress',
-  //   progress: 30,
-  //   tags: ['Python', 'Pandas', 'EV/EBITDA'],
-  //   output: 'Research note · Python notebook',
-  //   githubUrl: undefined,
-  //   liveUrl: undefined,
-  //   featured: true,
-  //   createdAt: '2026-06-01',
-  // },
+  {
+    title: 'Amper S.A. — Análisis EV/EBITDA',
+    slug: 'amper-sa',
+    description:
+      'Análisis financiero de Amper S.A. (BME: AMP) usando datos de la CNMV y la web de IR de Amper. Cubre la transformación 2022–2025, la adquisición de Teltronic y el Plan Estratégico 2026–2028. Valoración por EV/EBITDA con tres escenarios, tabla de sensibilidad y comparables europeos de defensa.',
+    thesis:
+      'La transformación 2022–2025 fue real y medible (EBITDA: 11M€ → 46M€). El plan 2026–2028 es ambicioso. El riesgo principal está en la ejecución del inorgánico y la dilución accionarial.',
+    category: 'equity_research',
+    status: 'in_progress',
+    progress: 70,
+    tags: ['Python', 'Pandas', 'EV/EBITDA', 'Defensa', 'CNMV', 'Small Cap'],
+    output: 'Nota de research · Notebook Python · CSV datos CNMV',
+    learningFocus: 'Valoración por múltiplos, análisis de sensibilidad, datos financieros oficiales',
+    githubUrl: undefined,
+    liveUrl: '/es/research/amper-sa',
+    featured: true,
+    createdAt: '2026-06-01',
+    updatedAt: '2026-06-19',
+  },
 ]

@@ -17,17 +17,17 @@ import type { ResearchNote } from '@/types'
  *  - url:          (optional) URL or path to the full note
  */
 export const researchNotes: ResearchNote[] = [
-  // Add your research notes below. Example:
-  //
-  // {
-  //   title: 'My Research Note',
-  //   slug: 'my-research-note',
-  //   description: 'What this analysis covers and what it concludes.',
-  //   mainQuestion: 'What is the fair value under different scenarios?',
-  //   category: 'valuation',
-  //   status: 'coming_soon',
-  //   readingTime: '~8 min',
-  //   tags: ['Valuation', 'EV/EBITDA', 'Python'],
-  //   publishedAt: undefined,
-  // },
+  {
+    title: 'Amper S.A. — Análisis de Valoración EV/EBITDA',
+    slug: 'amper-sa',
+    description:
+      'Análisis financiero completo de Amper S.A. (BME: AMP) en su transformación hacia defensa, comunicaciones críticas y energía. Incluye tabla de sensibilidad, escenarios conservador/base/optimista y comparables europeos. Contra-split 25:1 pendiente (30/06/2026).',
+    mainQuestion: '¿Qué precio objetivo implica el plan 2026–2028 bajo distintos múltiplos y niveles de EBITDA?',
+    category: 'valuation',
+    status: 'in_progress',
+    readingTime: '~10 min',
+    tags: ['EV/EBITDA', 'Defensa', 'Small Cap', 'Python', 'CNMV', 'Contra-split'],
+    publishedAt: undefined,
+    url: '/es/research/amper-sa',
+  },
 ]
