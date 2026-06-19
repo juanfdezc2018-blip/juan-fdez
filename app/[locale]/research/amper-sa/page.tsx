@@ -97,6 +97,65 @@ const TESIS = {
   ],
 }
 
+// ─── Business Map ─────────────────────────────────────────────────────────────
+
+const SEGMENTOS = [
+  {
+    id: 'defensa', icono: '⬡', titulo: 'Defensa y Seguridad Nacional',
+    color: { card: 'border-sky-500/25 bg-sky-500/[0.04]', accent: 'text-sky-400', chip: 'bg-sky-500/10 border-sky-500/20 text-sky-400/90' },
+    desc: 'Sistemas de comunicaciones, integración de soluciones y tecnologías duales civil-militar para defensa y seguridad nacional.',
+    subcaps: ['Comunicaciones militares', 'Integración sistemas defensa', 'Seguridad nacional', 'Tecnologías duales', 'C-UAS / antidron ¹', 'SIGINT ¹'],
+    ingresos: ['Contratos públicos', 'Programas defensa largo plazo', 'Integración de sistemas', 'Mantenimiento y soporte'],
+    que_mirar: ['Nuevos contratos adjudicados', 'Presupuesto defensa europeo', 'Conversión cartera pedidos', 'Margen EBITDA por segmento'],
+    riesgos: ['Ciclos presupuestarios', 'Retrasos en adjudicaciones', 'Riesgo político', 'Concentración de clientes'],
+  },
+  {
+    id: 'telecom', icono: '◈', titulo: 'Comunicaciones Críticas',
+    color: { card: 'border-violet-500/25 bg-violet-500/[0.04]', accent: 'text-violet-400', chip: 'bg-violet-500/10 border-violet-500/20 text-violet-400/90' },
+    desc: 'Redes para entornos de misión crítica: defensa, emergencias, transporte y seguridad pública. Teltronic refuerza este bloque significativamente.',
+    nota: 'Teltronic — anunciada mayo 2026 · hasta 225 M€ · sujeta a integración',
+    subcaps: ['Redes privadas profesionales', 'Misión crítica / TETRA', 'Emergencias y seguridad pública', 'Soluciones defensa/telecom', 'Internacionalización ¹'],
+    ingresos: ['Venta de sistemas', 'Integración de redes', 'Servicios recurrentes', 'Mantenimiento y soporte', 'Contratos internacionales'],
+    que_mirar: ['Avance integración Teltronic', 'EBITDA incremental', 'Sinergias comerciales', 'Nuevos contratos internacionales'],
+    riesgos: ['Precio elevado vs cap actual', 'Integración operativa', 'Deuda asumida', 'Pago en acciones / dilución'],
+  },
+  {
+    id: 'energia', icono: '⊗', titulo: 'Energía y Sostenibilidad',
+    color: { card: 'border-emerald-500/25 bg-emerald-500/[0.04]', accent: 'text-emerald-400', chip: 'bg-emerald-500/10 border-emerald-500/20 text-emerald-400/90' },
+    desc: 'Electrónica de potencia, sistemas eléctricos industriales y energía naval. Elinsa aporta capacidades estratégicas en este segmento.',
+    nota: 'Elinsa — integrada · electrónica de potencia y energía naval/industrial',
+    subcaps: ['Electrónica de potencia', 'Almacenamiento energético', 'Sistemas eléctricos industriales', 'Energía naval e industrial', 'Eólica marina ¹', 'Agua e industria ¹'],
+    ingresos: ['Fabricación de equipos', 'Contratos industriales', 'Proyectos llave en mano', 'Ingeniería y mantenimiento'],
+    que_mirar: ['Contratos marco', 'Capex requerido', 'Margen industrial', 'Conversión de pedidos'],
+    riesgos: ['Capex elevado', 'Presión en márgenes', 'Ciclos industriales', 'Ejecución proyectos complejos'],
+  },
+  {
+    id: 'ma', icono: '⊕', titulo: 'M&A / Perímetro en expansión',
+    color: { card: 'border-amber-500/25 bg-amber-500/[0.04]', accent: 'text-amber-400', chip: 'bg-amber-500/10 border-amber-500/20 text-amber-400/90' },
+    desc: 'El plan contempla 3–5 adquisiciones adicionales. El M&A es el principal acelerador del EBITDA 2028, pero también el principal riesgo por deuda, dilución e integración.',
+    nota: 'Opcionalidad M&A — futuras compras no incluidas en el modelo base · nombres y precios sin confirmar',
+    subcaps: ['Teltronic (anunciada)', 'Elinsa (integrada)', '3–5 compras previstas', 'Defensa / seguridad', 'Comunicaciones', 'Energía / almacenamiento'],
+    ingresos: ['Ampliación de ventas', 'Aumento de EBITDA', 'Nuevas capacidades tecnológicas', 'Acceso a nuevos mercados'],
+    que_mirar: ['Anuncios de nuevas compras', '% pagado en acciones', 'Deuda asumida', 'EBITDA adquirido', 'Calendario integración'],
+    riesgos: ['Dilución accionarial', 'Endeudamiento excesivo', 'Integraciones fallidas', 'Comprar caro en ciclo alto', 'Destrucción de valor'],
+  },
+]
+
+const VISIBILIDAD: Array<{ item: string; conf: boolean; prob: boolean; pend: boolean }> = [
+  { item: 'EBITDA 2025A',               conf: true,  prob: false, pend: false },
+  { item: 'Cartera pedidos actual',      conf: true,  prob: false, pend: false },
+  { item: 'Adquisición Teltronic',       conf: true,  prob: false, pend: false },
+  { item: 'Integración Teltronic',       conf: false, prob: true,  pend: false },
+  { item: 'Elinsa (integrada)',          conf: true,  prob: false, pend: false },
+  { item: 'EBITDA proforma Teltronic',   conf: false, prob: true,  pend: false },
+  { item: 'Deuda post-M&A',             conf: false, prob: false, pend: true  },
+  { item: 'Futuras adquisiciones',       conf: false, prob: false, pend: true  },
+  { item: 'Dilución futura',             conf: false, prob: false, pend: true  },
+  { item: 'Guidance 2028',              conf: false, prob: true,  pend: false },
+  { item: 'Sinergias Teltronic',         conf: false, prob: false, pend: true  },
+  { item: 'FCF libre 2026–2028',         conf: false, prob: false, pend: true  },
+]
+
 // ─── Sensitivity Matrix ────────────────────────────────────────────────────────
 
 const EBITDA_ROWS = [80, 90, 100, 110, 120, 130, 140, 150]
@@ -232,6 +291,221 @@ export default function AmperPage({ params }: Props) {
           <p className="text-slate-600 text-[10px] font-mono mt-3">
             Fuente: CMD Amper 29/04/2026. 2022–2024 incluyen Servicios Industriales (desinvertido 2025). 2028E = guidance plan estratégico.
           </p>
+        </div>
+      </section>
+
+      {/* ── Business Map ── */}
+      <section>
+        <h2 className="font-mono text-xs text-sky-400 uppercase tracking-widest opacity-70 mb-1">// business map</h2>
+        <h3 className="text-[#F5F7FA] font-semibold text-lg mb-2">Amper como plataforma industrial: capacidades, verticales y opcionalidad M&A</h3>
+        <p className="text-[#9AA7B8] text-sm leading-relaxed mb-6 max-w-2xl">
+          Amper no es una sola empresa. Es un grupo que intenta construir una plataforma industrial-tecnológica a través de adquisiciones y desarrollo interno.
+          Este mapa muestra qué hay dentro, qué está confirmado y qué sigue siendo tesis.
+        </p>
+
+        {/* Hub card */}
+        <div className="rounded-xl border border-sky-500/20 bg-sky-500/[0.03] p-5 mb-4">
+          <div className="flex flex-wrap items-start gap-4 mb-4">
+            <div className="flex-1 min-w-0">
+              <div className="flex items-center gap-2 mb-1">
+                <span className="font-mono text-sky-400 text-base">◉</span>
+                <span className="text-[#F5F7FA] font-semibold text-base">Grupo Amper</span>
+                <span className="font-mono text-xs text-slate-500 ml-1">BME: AMP</span>
+              </div>
+              <p className="text-[#9AA7B8] text-xs leading-relaxed">
+                Holding industrial-tecnológico cotizado en BME. Plan estratégico 2026–2028: escala vía M&A en defensa, comunicaciones críticas y energía.
+                EBITDA objetivo: ≥130 M€ en 2028. Cap actual ~478 M€.
+              </p>
+            </div>
+            <div className="flex flex-wrap gap-2 shrink-0">
+              {['Defensa', 'Com. Críticas', 'Energía', 'M&A'].map((v, i) => (
+                <span key={v} className={`px-2.5 py-1 rounded-full border text-xs font-mono ${
+                  i === 0 ? 'border-sky-500/30 bg-sky-500/10 text-sky-400' :
+                  i === 1 ? 'border-violet-500/30 bg-violet-500/10 text-violet-400' :
+                  i === 2 ? 'border-emerald-500/30 bg-emerald-500/10 text-emerald-400' :
+                  'border-amber-500/30 bg-amber-500/10 text-amber-400'
+                }`}>{v}</span>
+              ))}
+            </div>
+          </div>
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+            {[
+              { label: 'Ventas 2025A', val: '282 M€' },
+              { label: 'EBITDA 2025A', val: '46.3 M€' },
+              { label: 'Cartera pedidos', val: '695 M€' },
+              { label: 'Objetivo EBITDA 2028', val: '≥130 M€' },
+            ].map(kpi => (
+              <div key={kpi.label} className="rounded-lg border border-border/60 bg-surface-2/60 p-3">
+                <div className="text-[10px] font-mono text-slate-500 mb-0.5 uppercase tracking-wide">{kpi.label}</div>
+                <div className="text-[#F5F7FA] font-semibold text-sm font-mono">{kpi.val}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Visual connector */}
+        <div className="flex justify-center my-1">
+          <div className="w-px h-6 bg-border/50" />
+        </div>
+
+        {/* Segment cards 2×2 */}
+        <div className="grid sm:grid-cols-2 gap-3 mb-4">
+          {SEGMENTOS.map(seg => (
+            <div key={seg.id} className={`rounded-xl border ${seg.color.card} p-5`}>
+              <div className="flex items-center gap-2 mb-1">
+                <span className={`font-mono ${seg.color.accent} text-base`}>{seg.icono}</span>
+                <h4 className={`${seg.color.accent} text-xs font-mono font-semibold uppercase tracking-wide`}>{seg.titulo}</h4>
+              </div>
+              <p className="text-[#9AA7B8] text-xs leading-relaxed mb-3">{seg.desc}</p>
+              {'nota' in seg && (
+                <div className={`rounded border ${seg.color.card} border-opacity-60 px-2.5 py-1.5 mb-3`}>
+                  <span className={`${seg.color.accent} text-[10px] font-mono`}>↳ {seg.nota}</span>
+                </div>
+              )}
+
+              <div className="mb-3">
+                <div className="text-[10px] font-mono text-slate-500 uppercase tracking-wide mb-1.5">Subcapacidades</div>
+                <div className="flex flex-wrap gap-1">
+                  {seg.subcaps.map(s => (
+                    <span key={s} className={`px-2 py-0.5 rounded border text-[10px] font-mono ${seg.color.chip}`}>{s}</span>
+                  ))}
+                </div>
+              </div>
+
+              <div className="grid grid-cols-1 gap-2 text-xs">
+                <div>
+                  <div className="text-[10px] font-mono text-slate-500 uppercase tracking-wide mb-1">Modelo de ingresos</div>
+                  <ul className="space-y-0.5">
+                    {seg.ingresos.map(i => (
+                      <li key={i} className="flex gap-1.5 items-start">
+                        <span className={`${seg.color.accent} opacity-50 shrink-0 mt-0.5 text-[10px]`}>·</span>
+                        <span className="text-[#9AA7B8] text-[11px]">{i}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div className="grid grid-cols-2 gap-2">
+                  <div>
+                    <div className="text-[10px] font-mono text-slate-500 uppercase tracking-wide mb-1">Qué mirar</div>
+                    <ul className="space-y-0.5">
+                      {seg.que_mirar.map(q => (
+                        <li key={q} className="flex gap-1.5 items-start">
+                          <span className="text-sky-400/40 shrink-0 mt-0.5 text-[10px]">→</span>
+                          <span className="text-[#9AA7B8] text-[11px]">{q}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  <div>
+                    <div className="text-[10px] font-mono text-slate-500 uppercase tracking-wide mb-1">Riesgos</div>
+                    <ul className="space-y-0.5">
+                      {seg.riesgos.map(r => (
+                        <li key={r} className="flex gap-1.5 items-start">
+                          <span className="text-red-400/40 shrink-0 mt-0.5 text-[10px]">!</span>
+                          <span className="text-[#9AA7B8] text-[11px]">{r}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Value creation pipeline */}
+        <div className="rounded-xl border border-border bg-surface p-5 mb-4">
+          <div className="text-[10px] font-mono text-slate-500 uppercase tracking-wide mb-3">Pipeline de creación de valor</div>
+          <div className="flex flex-wrap items-center gap-1 mb-3">
+            {[
+              { label: 'Cartera', sub: '695 M€', color: 'border-sky-500/30 bg-sky-500/[0.06] text-sky-400' },
+              { label: 'Ventas', sub: '→ 820 M€', color: 'border-sky-400/25 bg-sky-400/[0.04] text-sky-300' },
+              { label: 'EBITDA', sub: '→ ≥130 M€', color: 'border-violet-500/30 bg-violet-500/[0.06] text-violet-400' },
+              { label: 'Deuda / Dilución', sub: 'Riesgo', color: 'border-amber-500/30 bg-amber-500/[0.06] text-amber-400' },
+              { label: 'Equity Value', sub: '?', color: 'border-emerald-500/30 bg-emerald-500/[0.06] text-emerald-400' },
+            ].map((step, i, arr) => (
+              <div key={step.label} className="flex items-center gap-1">
+                <div className={`rounded-lg border ${step.color} px-3 py-2`}>
+                  <div className="text-[11px] font-mono font-semibold">{step.label}</div>
+                  <div className="text-[10px] opacity-70">{step.sub}</div>
+                </div>
+                {i < arr.length - 1 && <span className="text-slate-600 text-xs font-mono">→</span>}
+              </div>
+            ))}
+          </div>
+          <p className="text-[#9AA7B8] text-[11px] leading-relaxed">
+            La cartera de pedidos es el punto de partida. Convertirla en ventas, luego en EBITDA, y controlar cuánto de ese EBITDA queda para el accionista
+            después de deuda e intereses y dilución por M&A: ese es el recorrido completo de la tesis.
+          </p>
+        </div>
+
+        {/* Visibility matrix */}
+        <div className="rounded-xl border border-border bg-surface overflow-x-auto mb-4">
+          <div className="px-4 py-3 border-b border-border">
+            <span className="text-[10px] font-mono text-slate-500 uppercase tracking-wide">Matriz de visibilidad — qué está confirmado y qué no</span>
+          </div>
+          <table className="w-full text-xs font-mono border-collapse">
+            <thead>
+              <tr className="border-b border-border/60">
+                <th className="text-left p-3 text-slate-400 font-medium text-[11px]">Elemento</th>
+                <th className="p-3 text-center text-emerald-400 font-medium text-[11px] border-l border-border/40">✓ Confirmado</th>
+                <th className="p-3 text-center text-sky-400 font-medium text-[11px] border-l border-border/40">~ Probable</th>
+                <th className="p-3 text-center text-amber-400 font-medium text-[11px] border-l border-border/40">? Pendiente</th>
+              </tr>
+            </thead>
+            <tbody>
+              {VISIBILIDAD.map((row, i) => (
+                <tr key={row.item} className={`border-b border-border/30 ${i % 2 === 0 ? '' : 'bg-white/[0.01]'}`}>
+                  <td className="p-3 text-[#9AA7B8] text-[11px]">{row.item}</td>
+                  <td className="p-3 text-center border-l border-border/40">
+                    {row.conf && <span className="inline-block w-4 h-4 rounded-full bg-emerald-500/20 border border-emerald-500/40 text-emerald-400 text-[10px] leading-4">✓</span>}
+                  </td>
+                  <td className="p-3 text-center border-l border-border/40">
+                    {row.prob && <span className="inline-block w-4 h-4 rounded-full bg-sky-500/20 border border-sky-500/40 text-sky-400 text-[10px] leading-4">~</span>}
+                  </td>
+                  <td className="p-3 text-center border-l border-border/40">
+                    {row.pend && <span className="inline-block w-4 h-4 rounded-full bg-amber-500/20 border border-amber-500/40 text-amber-400 text-[10px] leading-4">?</span>}
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+
+        {/* Notes + footnote */}
+        <div className="space-y-2 mb-4">
+          <div className="rounded-lg border border-border/40 bg-surface-2/40 px-4 py-2.5">
+            <p className="text-[#9AA7B8] text-[11px] leading-relaxed">
+              <span className="text-slate-400 font-mono">Nota metodológica:</span> Los segmentos de ingresos y subcapacidades se basan en fuentes oficiales Amper IR y CMD 29/04/2026.
+              Las capacidades marcadas con ¹ son áreas mencionadas en el plan estratégico pero sin ingresos verificados en cuentas anuales.
+            </p>
+          </div>
+          <div className="rounded-lg border border-amber-500/20 bg-amber-500/[0.03] px-4 py-2.5">
+            <p className="text-[#9AA7B8] text-[11px] leading-relaxed">
+              <span className="text-amber-400 font-mono">¹ Pendiente de verificación en fuentes oficiales.</span>{' '}
+              Las futuras adquisiciones previstas en el plan no tienen nombres confirmados ni precios. El EBITDA de Teltronic (~20 M€) es estimación proforma.
+              La deuda post-M&A consolidada dependerá del número de operaciones, el mix cash/acciones y la generación de caja 2026–2028.
+            </p>
+          </div>
+        </div>
+
+        {/* Lectura rápida del mapa */}
+        <div className="rounded-xl border border-border bg-surface-2/30 p-5">
+          <div className="text-[10px] font-mono text-slate-500 uppercase tracking-wide mb-3">Lectura rápida del mapa</div>
+          <ul className="space-y-2">
+            {[
+              'Defensa y Comunicaciones Críticas son los segmentos con mayor viento de cola y mejores márgenes potenciales.',
+              'Teltronic es la adquisición más relevante: refuerza Comunicaciones Críticas, pero el precio (~225 M€) implica riesgo de deuda y dilución.',
+              'Energía/Elinsa aporta diversificación, pero los márgenes industriales son más ajustados y el capex puede ser elevado.',
+              'El M&A es el motor del plan 2028. Si las adquisiciones son caras o se pagan en acciones, el valor por acción puede no crecer aunque el EBITDA sí lo haga.',
+              'El riesgo no es que Amper no crezca. El riesgo es que crezca destruyendo valor para el accionista actual.',
+            ].map((point, i) => (
+              <li key={i} className="flex gap-2.5 items-start">
+                <span className="font-mono text-sky-400/60 text-xs shrink-0 mt-0.5">{i + 1}.</span>
+                <span className="text-[#9AA7B8] text-xs leading-relaxed">{point}</span>
+              </li>
+            ))}
+          </ul>
         </div>
       </section>
 
