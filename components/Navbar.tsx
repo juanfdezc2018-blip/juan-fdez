@@ -64,12 +64,10 @@ export default function Navbar() {
             </Link>
           ))}
           <a
-            href="https://github.com/juanfdez"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="mailto:juanfdezc.2018@gmail.com"
             className="ml-2 px-4 py-1.5 rounded-md border border-[#00D4AA]/30 text-[#00D4AA] text-sm font-medium hover:bg-[#00D4AA]/10 transition-all duration-200"
           >
-            GitHub
+            Contact
           </a>
         </div>
 

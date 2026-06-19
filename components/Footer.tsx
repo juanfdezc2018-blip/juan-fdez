@@ -3,9 +3,7 @@
 import Link from 'next/link'
 
 const links = [
-  { label: 'GitHub', href: 'https://github.com/juanfdez' },
-  { label: 'LinkedIn', href: 'https://linkedin.com/in/juanfdez' },
-  { label: 'X / Twitter', href: 'https://x.com/juanfdez' },
+  { label: 'Email', href: 'mailto:juanfdezc.2018@gmail.com' },
 ]
 
 export default function Footer() {

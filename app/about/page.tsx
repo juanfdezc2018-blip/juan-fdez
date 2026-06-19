@@ -6,9 +6,6 @@ export const metadata: Metadata = {
 }
 
 const links = [
-  { label: 'GitHub', href: 'https://github.com/juanfdez', description: 'Code & projects' },
-  { label: 'LinkedIn', href: 'https://linkedin.com/in/juanfdez', description: 'Professional profile' },
-  { label: 'X / Twitter', href: 'https://x.com/juanfdez', description: 'Market thoughts' },
   { label: 'Email', href: 'mailto:juanfdezc.2018@gmail.com', description: 'Get in touch' },
 ]
 

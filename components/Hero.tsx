@@ -90,12 +90,10 @@ export default function Hero() {
                 Read Research
               </Link>
               <a
-                href="https://github.com/juanfdez"
-                target="_blank"
-                rel="noopener noreferrer"
+                href="mailto:juanfdezc.2018@gmail.com"
                 className="px-5 py-2.5 border border-white/10 text-slate-300 font-medium text-sm rounded-lg hover:bg-white/5 hover:border-white/20 transition-all duration-200"
               >
-                GitHub ↗
+                Contact ↗
               </a>
             </motion.div>
 
@@ -108,28 +106,10 @@ export default function Hero() {
               className="mt-6 flex items-center gap-4"
             >
               <a
-                href="https://linkedin.com/in/juanfdez"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-slate-500 hover:text-slate-300 text-sm transition-colors"
-              >
-                LinkedIn ↗
-              </a>
-              <span className="text-slate-700">·</span>
-              <a
-                href="https://x.com/juanfdez"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-slate-500 hover:text-slate-300 text-sm transition-colors"
-              >
-                X / Twitter ↗
-              </a>
-              <span className="text-slate-700">·</span>
-              <a
                 href="mailto:juanfdezc.2018@gmail.com"
                 className="text-slate-500 hover:text-slate-300 text-sm transition-colors"
               >
-                Email ↗
+                juanfdezc.2018@gmail.com
               </a>
             </motion.div>
           </div>

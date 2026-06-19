@@ -82,12 +82,10 @@ export default function HomePage() {
           </p>
           <div className="flex flex-wrap justify-center gap-3">
             <a
-              href="https://github.com/juanfdez"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="mailto:juanfdezc.2018@gmail.com"
               className="px-5 py-2.5 bg-[#00D4AA] text-[#050A14] font-semibold text-sm rounded-lg hover:bg-[#00D4AA]/90 transition-colors"
             >
-              Follow on GitHub
+              Get in touch
             </a>
             <a
               href="/about"

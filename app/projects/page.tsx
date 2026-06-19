@@ -41,11 +41,7 @@ export default function ProjectsPage() {
       <div className="mt-12 rounded-xl border border-white/8 bg-white/[0.02] p-6 text-center">
         <p className="font-mono text-xs text-[#00D4AA] mb-2">Early portfolio · Summer 2026</p>
         <p className="text-slate-400 text-sm">
-          More projects will be published throughout the summer. Follow on{' '}
-          <a href="https://github.com/juanfdez" className="text-[#00D4AA] hover:underline" target="_blank" rel="noopener noreferrer">
-            GitHub
-          </a>{' '}
-          to stay updated.
+          More projects will be published throughout the summer. Check back soon.
         </p>
       </div>
     </main>
